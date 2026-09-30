@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav ul li a:hover {
+    color: #00bfff;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+
+/* SERVICES */
+
+.services {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.service {
+    flex: 1;
+    min-width: 250px;
+    background-color: lightblue;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin-bottom: 15px;
+}
+
+
+/* TESTIMONIALS */
+
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ddd;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .testimonials {
+        padding: 40px 20px;
+    }
+}
