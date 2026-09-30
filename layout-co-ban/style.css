@@ -1,0 +1,199 @@
+/* Thiết lập chung */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+/* Vùng chính */
+
+#main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* HEAD */
+
+#head {
+    height: 120px;
+    background-color: #2c3e50;
+    border: 1px solid #1f2d3a;
+    margin-bottom: 5px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Banner */
+
+.banner {
+    font-size: 22px;
+}
+
+
+/* HEAD LINK */
+
+#head-link {
+    height: 45px;
+    background-color: #34495e;
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#head-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#head-link a:hover {
+    color: #f1c40f;
+}
+
+
+/* LEFT */
+
+#left {
+    width: 200px;
+    min-height: 400px;
+
+    float: left;
+
+    background-color: #dff0ff;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    margin-right: 10px;
+}
+
+#left h3 {
+    margin-top: 0;
+}
+
+#left ul {
+    list-style: none;
+    padding: 0;
+}
+
+#left li {
+    margin-bottom: 12px;
+}
+
+#left a {
+    color: #333;
+    text-decoration: none;
+}
+
+#left a:hover {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+
+/* CONTENT */
+
+#content {
+    width: 550px;
+    min-height: 400px;
+
+    float: left;
+
+    background-color: white;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    margin-right: 10px;
+}
+
+
+/* Các phần trong content */
+
+.section {
+    margin-bottom: 25px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+
+/* RIGHT */
+
+#right {
+    width: 220px;
+    min-height: 400px;
+
+    float: right;
+
+    background-color: #eaf7ea;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#right h3 {
+    margin-top: 0;
+    color: #27ae60;
+}
+
+#right p {
+    padding: 10px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* FOOTER */
+
+#footer {
+    clear: both;
+
+    min-height: 80px;
+
+    background-color: #2c3e50;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    margin-top: 5px;
+}
