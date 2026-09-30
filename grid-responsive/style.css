@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Bố cục chính */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 3fr 1fr;
+
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "navigation navigation"
+        "main sidebar"
+        "footer footer";
+
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+
+    background-color: #333;
+    color: white;
+
+    text-align: center;
+    padding: 30px;
+}
+
+/* Navigation */
+.navigation {
+    grid-area: navigation;
+
+    background-color: #555;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+
+    padding: 15px 25px;
+}
+
+.navigation a:hover {
+    background-color: #777;
+}
+
+/* Main */
+.main-content {
+    grid-area: main;
+
+    background-color: white;
+
+    padding: 30px;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+
+    background-color: #e8e8e8;
+
+    padding: 30px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+
+    background-color: #333;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            auto
+            auto
+            auto
+            auto
+            auto;
+
+        grid-template-areas:
+            "header"
+            "navigation"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+}
