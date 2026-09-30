@@ -1,0 +1,127 @@
+/* Thiết lập cơ bản */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 90px;
+    min-height: 1500px;
+}
+
+/* Header cố định */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #333;
+    color: white;
+
+    padding: 15px 20px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/* Tiêu đề */
+.main-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Menu */
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Các mục menu */
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+/* Link */
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover */
+.main-header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Container chính */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: white;
+    padding: 15px;
+
+    border-radius: 5px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    flex-shrink: 0;
+}
+
+/* Sidebar trái */
+.left-sidebar {
+    width: 200px;
+}
+
+/* Sidebar phải */
+.right-sidebar {
+    width: 200px;
+}
+
+/* Nội dung chính */
+.main-content {
+    background-color: white;
+    padding: 20px;
+
+    border-radius: 5px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    flex-grow: 1;
+}
+
+/* Tiêu đề sidebar */
+.sidebar h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Danh sách sidebar */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Đoạn văn */
+.main-content p {
+    line-height: 1.7;
+    color: #444;
+}
