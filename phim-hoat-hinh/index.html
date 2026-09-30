@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Hoạt Hình Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            🎬 Cartoon TV
+        </div>
+
+        <nav class="head-link">
+            <a href="#">Trang chủ</a>
+            <a href="#">Phim mới</a>
+            <a href="#">Phim nổi bật</a>
+            <a href="#">Thể loại</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Tìm tên phim...">
+            <button onclick="searchMovie()">Tìm</button>
+        </div>
+    </header>
+
+
+    <!-- NỘI DUNG CHÍNH -->
+    <div class="container">
+
+        <!-- LEFT CONTENT -->
+        <aside class="left-content">
+
+            <h2>Danh sách phim</h2>
+
+            <ul id="movieList">
+
+                <li>
+                    <a href="#" onclick="showMovie('Tom and Jerry')">
+                        Tom and Jerry
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showMovie('Doraemon')">
+                        Doraemon
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showMovie('Pokemon')">
+                        Pokemon
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showMovie('SpongeBob')">
+                        SpongeBob
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="showMovie('The Lion King')">
+                        The Lion King
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- RIGHT CONTENT -->
+        <main class="right-content">
+
+            <h1 id="movieTitle">Tom and Jerry</h1>
+
+            <!-- Video HTML5 -->
+            <div class="video-container">
+
+                <video controls width="100%">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+
+            </div>
+
+
+            <h2>Video YouTube</h2>
+
+            <!-- Nhúng YouTube bằng iframe -->
+            <div class="youtube-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                    title="Video hoạt hình"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="description">
+
+                <h2>Thông tin phim</h2>
+
+                <p>
+                    Đây là website xem phim hoạt hình trực tuyến.
+                    Các nội dung được lựa chọn phù hợp với trẻ em.
+                </p>
+
+                <p>
+                    Chất lượng video hỗ trợ từ HD 720p đến Full HD 1080p.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Cartoon TV - Website xem phim hoạt hình
+        </p>
+
+        <p>
+            Nội dung dành cho mục đích học tập.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function showMovie(movieName) {
+
+            document.getElementById("movieTitle").innerText = movieName;
+
+        }
+
+
+        function searchMovie() {
+
+            let keyword =
+                document.getElementById("searchInput").value.toLowerCase();
+
+            let movies =
+                document.querySelectorAll("#movieList li");
+
+            movies.forEach(function(movie) {
+
+                let movieName =
+                    movie.innerText.toLowerCase();
+
+                if (movieName.includes(keyword)) {
+                    movie.style.display = "block";
+                } else {
+                    movie.style.display = "none";
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
