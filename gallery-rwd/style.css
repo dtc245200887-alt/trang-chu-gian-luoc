@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: "Times New Roman", serif;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 25px;
+}
+
+.row {
+    width: 100%;
+}
+
+/* 4 ảnh trên một dòng */
+.gallery {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+.desc {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 20px 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Xóa float sau gallery */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.note {
+    clear: both;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+
+/* Màn hình nhỏ hơn 700px
+   Hiển thị 2 ảnh trên một dòng */
+@media screen and (max-width: 700px) {
+
+    .gallery {
+        width: 50%;
+    }
+
+}
+
+
+/* Màn hình nhỏ hơn 500px
+   Hiển thị 1 ảnh trên một dòng */
+@media screen and (max-width: 500px) {
+
+    .gallery {
+        width: 100%;
+    }
+
+}
