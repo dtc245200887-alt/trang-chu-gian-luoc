@@ -1,0 +1,46 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Wrap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Thực hành CSS Flex-wrap</h1>
+
+    <div class="controls">
+        <button onclick="changeWrap('nowrap')">nowrap</button>
+        <button onclick="changeWrap('wrap')">wrap</button>
+        <button onclick="changeWrap('wrap-reverse')">wrap-reverse</button>
+        <button onclick="changeWrap('initial')">initial</button>
+    </div>
+
+    <p>Giá trị đang chọn: <strong id="current-value">wrap</strong></p>
+
+    <div class="container" id="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <script>
+        function changeWrap(value) {
+            const container = document.getElementById("flex-container");
+
+            if (value === "initial") {
+                container.style.flexWrap = "initial";
+            } else {
+                container.style.flexWrap = value;
+            }
+
+            document.getElementById("current-value").textContent = value;
+        }
+    </script>
+</body>
+</html>
+```
