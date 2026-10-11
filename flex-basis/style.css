@@ -1,0 +1,138 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+.item {
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #3498db;
+    text-align: center;
+}
+
+/* Ví dụ 1: flex-basis theo px */
+.px-container {
+    flex-wrap: wrap;
+}
+
+.item-200 {
+    flex: 0 0 200px;
+}
+
+.item-100 {
+    flex: 0 0 100px;
+}
+
+.item-150 {
+    flex: 0 0 150px;
+}
+
+/* Ví dụ 2: flex-basis theo chiều dọc */
+.column-container {
+    flex-direction: column;
+    height: 400px;
+}
+
+.column-container .item {
+    flex: 0 0 100px;
+}
+
+/* Ví dụ 3: flex-basis theo phần trăm */
+.percent-container {
+    flex-wrap: wrap;
+}
+
+.percent-container .item {
+    flex: 0 0 50%;
+    background-color: lightcoral;
+}
+
+/* Ví dụ 4: flex-basis và flex-grow */
+.grow-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.grow-container .item {
+    flex-basis: 100px;
+}
+
+.grow-1 {
+    flex-grow: 1;
+    background-color: lightblue;
+}
+
+.grow-2 {
+    flex-grow: 2;
+    background-color: lightgreen;
+}
+
+.grow-3 {
+    flex-grow: 1;
+    background-color: lightyellow;
+}
+
+/* Ví dụ 5: auto, initial, inherit */
+.special-container {
+    flex-wrap: wrap;
+}
+
+.special-container .item {
+    width: 150px;
+}
+
+.auto-item {
+    flex-basis: auto;
+}
+
+.initial-item {
+    flex-basis: initial;
+}
+
+.inherit-item {
+    flex-basis: inherit;
+}
+
+/* Hiển thị tốt trên màn hình nhỏ */
+@media (max-width: 600px) {
+    body {
+        margin: 12px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .grow-container {
+        width: 100%;
+    }
+}

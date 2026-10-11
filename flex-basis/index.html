@@ -1,0 +1,58 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Basis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Thực hành CSS Flex-basis</h1>
+
+    <section>
+        <h2>Ví dụ 1: flex-basis với px</h2>
+        <div class="container px-container">
+            <div class="item item-200">Item 1<br>200px</div>
+            <div class="item item-100">Item 2<br>100px</div>
+            <div class="item item-150">Item 3<br>150px</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Ví dụ 2: flex-direction: column</h2>
+        <div class="container column-container">
+            <div class="item">Item 1 — basis 100px</div>
+            <div class="item">Item 2 — basis 100px</div>
+            <div class="item">Item 3 — basis 100px</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Ví dụ 3: flex-basis với %</h2>
+        <div class="container percent-container">
+            <div class="item">Item 1 — 50%</div>
+            <div class="item">Item 2 — 50%</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Ví dụ 4: flex-basis kết hợp flex-grow</h2>
+        <div class="container grow-container">
+            <div class="item grow-1">Item 1<br>Grow: 1</div>
+            <div class="item grow-2">Item 2<br>Grow: 2</div>
+            <div class="item grow-3">Item 3<br>Grow: 1</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Ví dụ 5: auto, initial và inherit</h2>
+        <div class="container special-container">
+            <div class="item auto-item">auto</div>
+            <div class="item initial-item">initial</div>
+            <div class="item inherit-item">inherit</div>
+        </div>
+    </section>
+</body>
+</html>
+```
