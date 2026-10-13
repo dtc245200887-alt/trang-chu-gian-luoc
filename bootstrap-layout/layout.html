@@ -1,0 +1,438 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Shopping Mall</title>
+
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+        }
+
+        header {
+            position: relative;
+            height: 180px;
+            background: linear-gradient(120deg, #1675b9, #64b5e5);
+            color: white;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .shopping-mall {
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
+            font-variant: small-caps;
+        }
+
+        .shopping-mall h1 {
+            font-family: Impact, sans-serif;
+            font-size: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px #333;
+            border-bottom: 1px dotted white;
+            padding-bottom: 8px;
+            margin: 0;
+        }
+
+        .shopping-mall h5 {
+            margin-top: 8px;
+        }
+
+        .header-icon {
+            position: absolute;
+            right: 30px;
+            top: 25px;
+            font-size: 85px;
+            color: white;
+            opacity: 0.85;
+        }
+
+        .navbar {
+            border-radius: 0;
+        }
+
+        .poly-cart {
+            margin-top: 5px;
+        }
+
+        .poly-cart ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-variant: small-caps;
+        }
+
+        .poly-cart .cart-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .cart-icon {
+            font-size: 55px;
+            color: #337ab7;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .panel-heading strong {
+            font-variant: small-caps;
+            font-size: 16px;
+        }
+
+        .poly-prod {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .poly-prod .panel {
+            transition: 0.2s;
+        }
+
+        .poly-prod .panel:hover {
+            box-shadow: 0 3px 10px #bbb;
+            transform: translateY(-3px);
+        }
+
+        .product-image {
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image span {
+            font-size: 65px;
+            color: #337ab7;
+        }
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .product-price {
+            color: #d9534f;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+            .shopping-mall {
+                left: 15px;
+            }
+
+            .shopping-mall h1 {
+                font-size: 28px;
+            }
+
+            .header-icon {
+                right: 15px;
+                font-size: 50px;
+                top: 20px;
+            }
+
+            .product-image {
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="row">
+        <div class="shopping-mall">
+            <h1>Online Shopping Mall</h1>
+            <h5>The center point of professional programming</h5>
+        </div>
+        <div class="header-icon">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#main-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-home"></span>
+                    Shop
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-home"></span>
+                            Trang chủ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#products">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            Liên hệ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            Góp ý
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                            Hỏi đáp
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                            data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Tài khoản
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Đăng ký</a></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="row">
+
+        <!-- DANH SÁCH SẢN PHẨM -->
+        <article class="col-sm-9" id="products">
+            <div class="row">
+
+                <div class="col-xs-6 col-md-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Điện thoại Nokia</h4>
+                        </div>
+                        <div class="panel-body product-image">
+                            <span class="glyphicon glyphicon-phone"></span>
+                        </div>
+                        <div class="panel-footer product-price">$100.25</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Laptop Dell</h4>
+                        </div>
+                        <div class="panel-body product-image">
+                            <span class="glyphicon glyphicon-hdd"></span>
+                        </div>
+                        <div class="panel-footer product-price">$550.00</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Máy tính để bàn</h4>
+                        </div>
+                        <div class="panel-body product-image">
+                            <span class="glyphicon glyphicon-blackboard"></span>
+                        </div>
+                        <div class="panel-footer product-price">$420.50</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Quạt máy</h4>
+                        </div>
+                        <div class="panel-body product-image">
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </div>
+                        <div class="panel-footer product-price">$35.00</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Tivi Samsung</h4>
+                        </div>
+                        <div class="panel-body product-image">
+                            <span class="glyphicon glyphicon-blackboard"></span>
+                        </div>
+                        <div class="panel-footer product-price">$320.00</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Tủ lạnh</h4>
+                        </div>
+                        <div class="panel-body product-image">
+                            <span class="glyphicon glyphicon-inbox"></span>
+                        </div>
+                        <div class="panel-footer product-price">$280.75</div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="col-sm-3">
+
+            <!-- GIỎ HÀNG -->
+            <div class="poly-cart">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            Giỏ hàng
+                        </strong>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-5 cart-icon">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </div>
+
+                            <div class="col-xs-7">
+                                <ul>
+                                    <li>100 sản phẩm</li>
+                                    <li>$56.80</li>
+                                    <li><a href="#">Xem giỏ hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TÌM KIẾM -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>
+                        <span class="glyphicon glyphicon-search"></span>
+                        Tìm kiếm
+                    </strong>
+                </div>
+
+                <div class="panel-body">
+                    <form onsubmit="return searchProducts()">
+                        <input id="keyword" placeholder="Từ khóa..."
+                            class="form-control">
+                    </form>
+                </div>
+            </div>
+
+            <!-- DANH MỤC -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <strong>Chủng loại</strong>
+                </div>
+
+                <div class="list-group">
+                    <a href="#products" class="list-group-item">Điện thoại di động</a>
+                    <a href="#products" class="list-group-item">Máy tính xách tay</a>
+                    <a href="#products" class="list-group-item">Máy tính để bàn</a>
+                    <a href="#products" class="list-group-item">Quạt máy</a>
+                    <a href="#products" class="list-group-item">Tivi</a>
+                    <a href="#products" class="list-group-item">Tủ lạnh</a>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="panel panel-default" id="contact">
+        <div class="panel-heading text-center">
+            <p>Online Shopping Mall &copy; 2026</p>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    function searchProducts() {
+        var keyword = document.getElementById("keyword").value.toLowerCase();
+        var products = document.querySelectorAll(".poly-prod");
+        var found = false;
+
+        products.forEach(function(product) {
+            var name = product.querySelector(".panel-title").textContent.toLowerCase();
+
+            if (name.includes(keyword)) {
+                product.style.display = "";
+                found = true;
+            } else {
+                product.style.display = "none";
+            }
+        });
+
+        if (keyword === "") {
+            products.forEach(function(product) {
+                product.style.display = "";
+            });
+        } else if (!found) {
+            alert("Không tìm thấy sản phẩm phù hợp!");
+        }
+
+        return false;
+    }
+</script>
+
+</body>
+</html>
