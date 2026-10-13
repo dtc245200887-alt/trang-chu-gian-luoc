@@ -1,0 +1,10 @@
+@mixin grid-column {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    float: left;
+}
+
+@mixin no-border {
+    border: none;
+}

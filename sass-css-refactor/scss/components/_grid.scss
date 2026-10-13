@@ -1,0 +1,92 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.grid-wrapper {
+    overflow: auto;
+    position: relative;
+    height: v.$grid-height;
+}
+
+.grid-content {
+    @include m.grid-column;
+
+    width: v.$column-width;
+    border-right: 1px solid v.$border-color;
+    background-color: v.$grid-color;
+}
+
+.top-bar {
+    height: 90px;
+}
+
+.top-content {
+    width: 100%;
+    background-color: v.$purple;
+    border-right-color: transparent;
+}
+
+.main-area {
+    height: 230px;
+}
+
+.side-column {
+    width: 25%;
+    padding-top: 15px;
+    background-color: v.$white;
+    @include m.no-border;
+}
+
+.empty-column {
+    background-color: v.$white;
+    @include m.no-border;
+}
+
+.small-block {
+    width: 100%;
+    height: 15%;
+    margin-bottom: 10px;
+    background-color: v.$blue;
+    @include m.no-border;
+}
+
+.large-block {
+    width: 100%;
+    height: 92%;
+    background-color: v.$blue;
+    @include m.no-border;
+}
+
+.bottom-bar {
+    height: 50px;
+}
+
+.bottom-content {
+    width: 100%;
+    background-color: v.$footer-blue;
+    border-right-color: transparent;
+}
+
+.background-grid {
+    opacity: 0.1;
+}
+
+.background-wrapper {
+    height: 370px;
+}
+
+.background-column {
+    background-color: v.$white;
+    border-right: 1px solid v.$black;
+}
+
+.background-column:first-child {
+    border-left: 1px solid v.$black;
+}
+
+.grid-overlay {
+    position: absolute;
+    left: 8px;
+    right: 10px;
+    width: auto;
+    opacity: 0.9;
+}
