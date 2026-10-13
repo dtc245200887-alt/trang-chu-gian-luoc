@@ -1,0 +1,99 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f1f1;
+}
+
+.header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    margin-bottom: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 220px;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.main-content {
+    flex: 3;
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+.image-placeholder {
+    height: 150px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #aaa;
+    display: flex;
+    align-items: flex-start;
+}
+
+.image-placeholder.large {
+    height: 220px;
+}
+
+.footer {
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Tablet va dien thoai */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+}
