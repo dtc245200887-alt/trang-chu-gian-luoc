@@ -1,62 +1,87 @@
 ```css
+/* Thiết lập chung */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
+/* Header */
 .header {
-    background-color: #333;
+    background-color: #2196f3;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 30px 20px;
 }
 
-.nav {
+/* Navigation */
+.navigation {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    background-color: #444;
-    padding: 15px;
+    background-color: #333;
 }
 
-.nav a {
+.navigation a {
     color: white;
     text-decoration: none;
+    padding: 15px 25px;
 }
 
-.nav a:hover {
-    color: #ffd700;
+.navigation a:hover {
+    background-color: #555;
 }
 
-.main-container {
+/* Khu vực nội dung */
+.container {
     display: flex;
-    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
 }
 
-.content {
+/* Nội dung chính */
+.main-content {
     flex: 3;
+    background-color: white;
     padding: 25px;
+    border-radius: 8px;
 }
 
+.main-content h2,
+.main-content h3 {
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 15px;
+}
+
+/* Sidebar */
 .sidebar {
     flex: 1;
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
     padding: 25px;
+    border-radius: 8px;
 }
 
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Footer */
 .footer {
     background-color: #333;
     color: white;
@@ -64,18 +89,18 @@ body {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .nav {
+/* Responsive cho điện thoại */
+@media screen and (max-width: 768px) {
+    .navigation {
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        text-align: center;
     }
 
-    .main-container {
+    .container {
         flex-direction: column;
     }
 
-    .content,
+    .main-content,
     .sidebar {
         width: 100%;
     }
