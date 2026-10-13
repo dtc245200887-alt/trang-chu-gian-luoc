@@ -1,0 +1,142 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <h1>Trang Web Bootstrap Grid System</h1>
+            <p class="mb-0">Thực hành thiết kế giao diện Responsive</p>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Website</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Trang chủ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content">Nội dung</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                            role="button" data-bs-toggle="dropdown">
+                            Danh mục
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#content">Tin tức</a></li>
+                            <li><a class="dropdown-item" href="#sidebar">Thông tin</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#footer">Liên hệ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2"
+                        type="search" placeholder="Tìm kiếm">
+                    <button class="btn btn-outline-light" type="submit">
+                        Tìm
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-4" id="content">
+        <div class="row g-4">
+
+            <!-- Cột nội dung chính -->
+            <div class="col-12 col-lg-8">
+                <div class="bg-light p-4 rounded shadow-sm">
+                    <h2>Nội dung chính</h2>
+                    <p>
+                        Đây là khu vực nội dung chính của trang web.
+                        Bootstrap Grid System giúp bố trí nội dung
+                        linh hoạt trên nhiều kích thước màn hình.
+                    </p>
+
+                    <h3>Bài viết 1</h3>
+                    <p>
+                        Bootstrap là framework CSS giúp xây dựng
+                        giao diện website nhanh chóng và dễ dàng.
+                    </p>
+
+                    <hr>
+
+                    <h3>Bài viết 2</h3>
+                    <p>
+                        Responsive giúp website tự động điều chỉnh
+                        bố cục phù hợp với máy tính, máy tính bảng
+                        và điện thoại.
+                    </p>
+
+                    <hr>
+
+                    <h3>Bài viết 3</h3>
+                    <p>
+                        Các lớp container, row và col của Bootstrap
+                        giúp tổ chức bố cục trang web khoa học.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sidebar: ẩn trên màn hình nhỏ -->
+            <aside class="col-12 col-lg-4 d-none d-lg-block" id="sidebar">
+                <div class="bg-light p-4 rounded shadow-sm">
+                    <h3>Sidebar</h3>
+                    <p>Thông tin bổ sung cho trang web.</p>
+
+                    <h5>Danh mục</h5>
+                    <ul>
+                        <li>Tin tức công nghệ</li>
+                        <li>Học lập trình</li>
+                        <li>Thiết kế website</li>
+                    </ul>
+
+                    <h5>Thông báo</h5>
+                    <p>
+                        Đây là khu vực hiển thị thông báo
+                        hoặc liên kết hữu ích.
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3" id="footer">
+        <div class="container">
+            <p class="mb-0">
+                &copy; 2026 My Website. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
